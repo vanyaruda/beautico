@@ -22,19 +22,21 @@ h3 {
   padding: 8px 0;
 }
 
-.container {
-  max-width: 1360px;
-  margin: auto;
+.d_flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  max-width: 1360px;
+  margin: auto;
   position: relative;
 }
 
 .top-text {
   max-width: 370px;
 }
-
 .top-text p {
   font-style: normal;
   font-weight: 400;
@@ -43,7 +45,6 @@ h3 {
   color: #ffffff;
   box-sizing: border-box;
 }
-
 .top-text a {
   text-decoration: none;
   font-style: normal;
@@ -56,4 +57,240 @@ h3 {
 .icon {
   position: absolute;
   right: 40px;
+}
+@media screen and (max-width: 768px) {
+  .icon {
+    display: none;
+  }
+}
+
+header {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 24px 0;
+}
+header .container {
+  max-width: 1280px;
+}
+header .container h3 {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .container {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+  header .container h3 {
+    display: flex;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 58px;
+    /* identical to box height, or 120% */
+    text-align: center;
+    color: #202939;
+  }
+}
+header .container .header_btn {
+  display: flex;
+  position: absolute;
+  right: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  header .container .header_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .container .header_btn li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .container .header_btn li:nth-child(1) {
+  margin-right: 8px;
+}
+@media screen and (max-width: 768px) {
+  header .container .header_btn li:nth-child(1) {
+    margin-bottom: 46px;
+  }
+}
+header .container .header_btn li:nth-child(1):before {
+  content: "";
+  display: inline-block;
+  background: url(../images/shopping_bag.svg);
+  width: 20px;
+  height: 30px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 53px;
+  top: 13px;
+}
+header .container .header_btn li:nth-child(1) a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #202939;
+  padding: 9px 0;
+  border: 1px solid #cdd5df;
+  border-radius: 64px;
+  padding-left: 45px;
+  padding-right: 21px;
+}
+header .container .header_btn li:nth-child(2) a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  padding: 9px 21px;
+  border-radius: 64px;
+  border: 1px solid #cf4d74;
+  background-color: #cf4d74;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  #menu {
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    z-index: 9;
+    background: #2980d9;
+    color: #ecf0f1;
+    padding: 50px 0;
+    width: 100vw;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    flex-direction: column;
+    border-radius: 3px;
+    transition: all 300ms ease-in-out;
+    justify-content: center;
+    text-align: center;
+  }
+}
+#menu.active {
+  top: 0;
+}
+#menu .nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  #menu .nav {
+    display: block;
+  }
+}
+#menu .nav li {
+  margin-right: 32px;
+}
+@media screen and (max-width: 768px) {
+  #menu .nav li {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+#menu .nav li a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  color: #697586;
+}
+@media screen and (max-width: 768px) {
+  #menu .nav li a {
+    color: #ffffff;
+    font-size: 20px;
+  }
+}
+
+#toggle {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 36px;
+    left: 20px;
+    top: 20px;
+    transition: all 300ms ease-in-out;
+    z-index: 10;
+  }
+  #toggle input {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+  }
+  #toggle input:checked + span {
+    background: transparent;
+    left: 0;
+  }
+  #toggle input:checked + span:after {
+    transform: rotate(45deg) translate(-1px, -12px);
+    left: -7px;
+    background: #fff;
+  }
+  #toggle input:checked + span:before {
+    transform: rotate(-45deg) translate(-4px, 16px);
+    left: -7px;
+    background: #fff;
+  }
+  #toggle span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #34495e;
+    margin-top: 10px;
+    transition: all 0.1s;
+    left: 0;
+  }
+  #toggle span:before, #toggle span:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #34495e;
+    top: -12px;
+    left: 0;
+    transition: all 0.3s;
+  }
+  #toggle span:after {
+    top: 12px;
+  }
+}
+
+.hydrated {
+  background-color: #edebf7;
+}
+.hydrated .container {
+  max-width: 1440px;
 }/*# sourceMappingURL=preproces.css.map */
