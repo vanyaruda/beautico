@@ -338,17 +338,27 @@ $color-four: #2980d9;
     background-color: #edebf7;
     min-height: 790px;
     position: relative;
+    @include max-screen(768px) {
+        min-height: 0;
+    }
     .container {
         max-width: 1440px;
         display: flex;
         align-items: center;
         box-sizing: border-box;
         justify-content: space-between;
+        @include max-screen(768px) {
+            justify-content: center;
+        }
     }
     .item {
-        margin-left: 80px;
         max-width: 560px;
         margin: 78px 80px 86px 80px;
+        @include max-screen(768px) {
+            margin: 0;
+            margin-top: 78px;
+            text-align: center;
+        }
 
         h3 {
             font-family: "Roboto";
@@ -373,7 +383,14 @@ $color-four: #2980d9;
         .btm {
             // padding-right: 16px;
             margin-bottom: 209px;
+            @include max-screen(390px) {
+                margin-bottom: 100px;
+            }
             a {
+                @include max-screen(768px) {
+                    display: block;
+                    margin-bottom: 15px;
+                }
                 &:first-of-type {
                     font-family: "Inter";
                     font-style: normal;
@@ -387,6 +404,9 @@ $color-four: #2980d9;
                     border-radius: 64px;
                     text-decoration: none;
                     margin-right: 16px;
+                    @include max-screen(768px) {
+                        margin-right: 0;
+                    }
                 }
                 &:last-of-type {
                     font-family: "Inter";
@@ -416,13 +436,28 @@ $color-four: #2980d9;
         .hydratech_frame {
             display: flex;
             list-style: none;
+            @include max-screen(768px) {
+                justify-content: center;
+            }
+            @include max-screen(390px) {
+                display: block;
+            }
             li {
                 margin-right: 52px;
+                @include max-screen(768px) {
+                    margin-right: 10px;
+                }
+                @include max-screen(390px) {
+                    margin-bottom: 15px;
+                }
             }
         }
     }
 }
 .hydrated_img {
+    @include max-screen(768px) {
+        display: none;
+    }
     img {
         width: 100%;
     }

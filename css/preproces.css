@@ -293,6 +293,11 @@ header .container .header_btn li:nth-child(2) a {
   min-height: 790px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .hydrated {
+    min-height: 0;
+  }
+}
 .hydrated .container {
   max-width: 1440px;
   display: flex;
@@ -300,10 +305,21 @@ header .container .header_btn li:nth-child(2) a {
   box-sizing: border-box;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .hydrated .container {
+    justify-content: center;
+  }
+}
 .hydrated .item {
-  margin-left: 80px;
   max-width: 560px;
   margin: 78px 80px 86px 80px;
+}
+@media screen and (max-width: 768px) {
+  .hydrated .item {
+    margin: 0;
+    margin-top: 78px;
+    text-align: center;
+  }
 }
 .hydrated .item h3 {
   font-family: "Roboto";
@@ -328,6 +344,17 @@ header .container .header_btn li:nth-child(2) a {
 .hydrated .item .btm {
   margin-bottom: 209px;
 }
+@media screen and (max-width: 390px) {
+  .hydrated .item .btm {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hydrated .item .btm a {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
 .hydrated .item .btm a:first-of-type {
   font-family: "Inter";
   font-style: normal;
@@ -341,6 +368,11 @@ header .container .header_btn li:nth-child(2) a {
   border-radius: 64px;
   text-decoration: none;
   margin-right: 16px;
+}
+@media screen and (max-width: 768px) {
+  .hydrated .item .btm a:first-of-type {
+    margin-right: 0;
+  }
 }
 .hydrated .item .btm a:last-of-type {
   font-family: "Inter";
@@ -369,13 +401,38 @@ header .container .header_btn li:nth-child(2) a {
   display: flex;
   list-style: none;
 }
+@media screen and (max-width: 768px) {
+  .hydrated .item .hydratech_frame {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hydrated .item .hydratech_frame {
+    display: block;
+  }
+}
 .hydrated .item .hydratech_frame li {
   margin-right: 52px;
+}
+@media screen and (max-width: 768px) {
+  .hydrated .item .hydratech_frame li {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .hydrated .item .hydratech_frame li {
+    margin-bottom: 15px;
+  }
 }
 
 .hydrated_img {
   width: 100%;
   height: 790px;
+}
+@media screen and (max-width: 768px) {
+  .hydrated_img {
+    display: none;
+  }
 }
 .hydrated_img img {
   width: 100%;
