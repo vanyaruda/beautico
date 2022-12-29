@@ -438,7 +438,52 @@ header .container .header_btn li:nth-child(2) a {
   width: 100%;
 }
 
-.caorusel {
+.caorusel_js {
   background-color: #edebf7;
-  min-height: 206px;
+  padding: 64px 0;
+}
+.caorusel_js .container {
+  max-width: 1440px;
+}
+.caorusel_js .caorusel_btm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.caorusel_js .caorusel_btm a {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3c2769;
+  text-decoration: none;
+  background: #ffffff;
+  border-radius: 64px;
+  padding: 24px 40px;
+  display: inline-block;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 24px 33px;
+  }
+}
+.caorusel_js .caorusel_btm a:nth-child(1) {
+  width: 181px;
+}
+.caorusel_js .caorusel_btm a:nth-child(2) {
+  width: 105px;
+}
+.caorusel_js .caorusel_btm a:nth-child(3) {
+  width: 155px;
+}
+.caorusel_js .caorusel_btm a:nth-child(4) {
+  width: 120px;
+}
+.caorusel_js .caorusel_btm a:nth-child(5) {
+  width: 110px;
+}
+.caorusel_js .caorusel_btm a:nth-child(6) {
+  width: 77px;
 }/*# sourceMappingURL=preproces.css.map */
