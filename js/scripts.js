@@ -12,14 +12,18 @@ $(document).ready(function () {
         navText: ['', ' '],
         autoplay: true,
         dots: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 200000,
         responsive: {
             0: {
                 items: 1
             },
-            480: {
+            371: {
                 items: 2
             },
+            540: {
+                items: 3
+            },
+
 
             1000: {
                 items: 5

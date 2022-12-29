@@ -469,11 +469,13 @@ $color-four: #2980d9;
     padding: 64px 0;
     .container {
         max-width: 1440px;
+        max-height: 206px;
     }
     .caorusel_btm {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        position: relative;
 
         a {
             font-family: "Roboto", sans-serif;
@@ -486,32 +488,87 @@ $color-four: #2980d9;
             background: #ffffff;
             border-radius: 64px;
             padding: 24px 40px;
-            // min-width: 183px;
+
             display: inline-block;
             text-align: center;
+            min-width: 181px;
             @include max-screen(768px) {
-                // width: auto;
-                padding: 24px 33px;
+                padding: 16px 20px;
+                min-width: 181px;
             }
+            @include max-screen(668px) {
+                padding: 16px 8px;
+            }
+            @include max-screen(592px) {
+                padding: 16px 0px;
+            }
+            @include max-screen(539px) {
+                padding: 16px 20px;
+                margin-left: 25px;
+            }
+            @include max-screen(480px) {
+                padding: 16px 10px;
+                margin-left: 0px;
+            }
+            @include max-screen(405px) {
+                padding: 16px 0px;
+                margin-left: 0px;
+            }
+            @include max-screen(370px) {
+                padding: 16px 50px;
+                margin-left: 0px;
+            }
+        }
+        .owl-dots {
+            text-align: center;
+        }
+        .owl-dots .owl-dot {
+            span {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: brown;
+                border-radius: 50%;
+            }
+        }
 
-            &:nth-child(1) {
-                width: 181px;
-            }
-            &:nth-child(2) {
-                width: 105px;
-            }
-            &:nth-child(3) {
-                width: 155px;
-            }
-            &:nth-child(4) {
-                width: 120px;
-            }
-            &:nth-child(5) {
-                width: 110px;
-            }
-            &:nth-child(6) {
-                width: 77px;
+        .owl-dots .owl-dot.active {
+            span {
+                position: absolute;
+                bottom: -30px;
+                left: 51%;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: blue;
+                border-radius: 50%;
             }
         }
     }
+
+    /* .owl-dots{
+    text-align: center;
+}
+.owl-dots .owl-dot span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: brown;
+    border-radius: 50%;
+    
+    
+}
+.owl-dots .owl-dot.active span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    
+}*/
+
+    /* close add dots */
 }

@@ -441,14 +441,37 @@ header .container .header_btn li:nth-child(2) a {
 .caorusel_js {
   background-color: #edebf7;
   padding: 64px 0;
+  /* .owl-dots{
+      text-align: center;
+  }
+  .owl-dots .owl-dot span{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: brown;
+      border-radius: 50%;
+
+
+  }
+  .owl-dots .owl-dot.active span{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+      border-radius: 50%;
+
+  }*/
+  /* close add dots */
 }
 .caorusel_js .container {
   max-width: 1440px;
+  max-height: 206px;
 }
 .caorusel_js .caorusel_btm {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 .caorusel_js .caorusel_btm a {
   font-family: "Roboto", sans-serif;
@@ -463,27 +486,68 @@ header .container .header_btn li:nth-child(2) a {
   padding: 24px 40px;
   display: inline-block;
   text-align: center;
+  min-width: 181px;
 }
 @media screen and (max-width: 768px) {
   .caorusel_js .caorusel_btm a {
-    padding: 24px 33px;
+    padding: 16px 20px;
+    min-width: 181px;
   }
 }
-.caorusel_js .caorusel_btm a:nth-child(1) {
-  width: 181px;
+@media screen and (max-width: 668px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 8px;
+  }
 }
-.caorusel_js .caorusel_btm a:nth-child(2) {
-  width: 105px;
+@media screen and (max-width: 592px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 0px;
+  }
 }
-.caorusel_js .caorusel_btm a:nth-child(3) {
-  width: 155px;
+@media screen and (max-width: 539px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 20px;
+    margin-left: 25px;
+  }
 }
-.caorusel_js .caorusel_btm a:nth-child(4) {
-  width: 120px;
+@media screen and (max-width: 480px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 10px;
+    margin-left: 0px;
+  }
 }
-.caorusel_js .caorusel_btm a:nth-child(5) {
-  width: 110px;
+@media screen and (max-width: 405px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 0px;
+    margin-left: 0px;
+  }
 }
-.caorusel_js .caorusel_btm a:nth-child(6) {
-  width: 77px;
+@media screen and (max-width: 370px) {
+  .caorusel_js .caorusel_btm a {
+    padding: 16px 50px;
+    margin-left: 0px;
+  }
+}
+.caorusel_js .caorusel_btm .owl-dots {
+  text-align: center;
+}
+.caorusel_js .caorusel_btm .owl-dots .owl-dot span {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.caorusel_js .caorusel_btm .owl-dots .owl-dot.active span {
+  position: absolute;
+  bottom: -30px;
+  left: 51%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
 }/*# sourceMappingURL=preproces.css.map */
